@@ -1,11 +1,15 @@
 import "./ModalWithForm.css";
 
-function ModalWithForm() {
+function ModalWithForm({ children, buttonText, title, activeModal, OnClose }) {
   return (
     <div className="modal">
       <div className="modal__content">
         <h2 className="modal__title">New garment</h2>
-        <button type="button" className="modal__close">
+        <button
+          onClick={handleCloseClick}
+          type="button"
+          className="modal__close"
+        >
           CLOSE
         </button>
         <form className="modal__form">
