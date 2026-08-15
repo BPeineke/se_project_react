@@ -1,8 +1,19 @@
-# React + Vite
+The project's name:
+SE_Project_React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A description of the project and its functionality:
 
-Currently, two official plugins are available:
+This is the react stage of a web application called “WTWR”. This application reads weather data from a Weather API and then recommends suitable clothing to the user based on that data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A description of the technologies and techniques used:
+
+- set up file structure to effectively use react and jsz
+- Created dynamic weather cards using open weather API
+
+Pictures, GIFs, or screenshots that detail project features (highly
+recommended)
+
+A demo video of your project (highly recommended)
+
+A link to GitHub Pages:
+https://github.com/BPeineke/se_project_react.git
