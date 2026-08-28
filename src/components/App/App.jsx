@@ -8,6 +8,7 @@ import {
 } from "../../utils/constants";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
+import Footer from "../Footer/footer";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 import { getweather, filterWeatherdata } from "../../utils/weatherApi";
@@ -62,6 +63,7 @@ function App() {
         <Header onAddClick={handleAddClick} weatherData={weatherData} />
         <Main weatherData={weatherData} items={items} />
       </div>
+      <Footer />
       {activeModal === "add-garment" && (
         <ModalWithForm
           onClose={closeActiveModal}
