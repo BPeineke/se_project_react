@@ -20,13 +20,7 @@ function App() {
     city: "",
   });
   const [activeModal, setActiveModal] = useState("");
-  const [selectedCard, setSelectedCard] = useState({});
   const [items, setItems] = useState(defaultClothingItems);
-
-  const handleCardClick = (card) => {
-    setActiveModal("preview");
-    setSelectedCard(card);
-  };
 
   const handleAddClick = () => {
     setActiveModal("add-garment");
@@ -70,11 +64,7 @@ function App() {
           onAddGarment={handleAddGarment}
         />
       )}
-      <ItemModal
-        activeModal={activeModal}
-        Card={selectedCard}
-        onClose={closeActiveModal}
-      />
+      <ItemModal activeModal={activeModal} onClose={closeActiveModal} />
     </div>
   );
 }

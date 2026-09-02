@@ -21,7 +21,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.js", "*.jsx"],
+      files: ["*.jsx"],
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
   ],
 };

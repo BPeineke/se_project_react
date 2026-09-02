@@ -1,6 +1,6 @@
 import "./ItemModal.css";
 
-function ItemModal({ activeModal, onClose, Card }) {
+function ItemModal({ activeModal, onClose }) {
   if (activeModal !== "preview") return null;
 
   return (
