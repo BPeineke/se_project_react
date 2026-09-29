@@ -1,4 +1,5 @@
 import { useState } from "react";
+import closeIcon from "../../assets/close.png";
 import "./ModalWithForm.css";
 
 function ModalWithForm({ onClose, onAddGarment }) {
@@ -20,8 +21,13 @@ function ModalWithForm({ onClose, onAddGarment }) {
     <div className="modal">
       <div className="modal__content">
         <h2 className="modal__title">New garment</h2>
-        <button onClick={onClose} type="button" className="modal__close">
-          CLOSE
+        <button
+          onClick={onClose}
+          type="button"
+          className="modal__close"
+          aria-label="Close modal"
+        >
+          <img src={closeIcon} alt="Close" />
         </button>
         <form className="modal__form" onSubmit={handleSubmit}>
           <label htmlFor="name" className="modal__label">
