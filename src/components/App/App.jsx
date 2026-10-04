@@ -21,9 +21,15 @@ function App() {
   });
   const [activeModal, setActiveModal] = useState("");
   const [items, setItems] = useState(defaultClothingItems);
+  const [selectedCard, setSelectedCard] = useState(null);
 
   const handleAddClick = () => {
     setActiveModal("add-garment");
+  };
+
+  const handleCardClick = (card) => {
+    setSelectedCard(card);
+    setActiveModal("preview");
   };
 
   const closeActiveModal = () => {
@@ -55,7 +61,11 @@ function App() {
     <div className="page">
       <div className="page__content">
         <Header onAddClick={handleAddClick} weatherData={weatherData} />
-        <Main weatherData={weatherData} items={items} />
+        <Main
+          weatherData={weatherData}
+          items={items}
+          handleCardClick={handleCardClick}
+        />
       </div>
       <Footer />
       {activeModal === "add-garment" && (
@@ -64,7 +74,11 @@ function App() {
           onAddGarment={handleAddGarment}
         />
       )}
-      <ItemModal activeModal={activeModal} onClose={closeActiveModal} />
+      <ItemModal
+        selectedCard={selectedCard || {}}
+        activeModal={activeModal}
+        onClose={closeActiveModal}
+      />
     </div>
   );
 }
