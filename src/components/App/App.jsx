@@ -45,7 +45,7 @@ function App() {
     };
 
     setItems((prevItems) => [...prevItems, newItem]);
-    setActiveModal("");
+    closeActiveModal("");
   };
 
   useEffect(() => {

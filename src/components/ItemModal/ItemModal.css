@@ -1,8 +1,23 @@
+.modal__content_type_image {
+  padding: 0;
+}
+
 .modal__image {
   display: block;
-  max-width: 100%;
+  width: calc(100% - 40px);
+  max-width: calc(100% - 40px);
   max-height: calc(100vh - 180px);
-  width: auto;
   height: auto;
   object-fit: contain;
+  margin: 20px;
+  border: 20px solid #fff;
+  box-sizing: border-box;
+}
+
+.modal__caption {
+  padding: 0 20px 20px;
+}
+
+.modal__caption .modal__title {
+  margin: 0;
 }

@@ -16,7 +16,9 @@ function ItemModal({ selectedCard, activeModal, onClose }) {
           src={selectedCard.link || ""}
           className="modal__image"
         />
-        <h2 className="modal__title">{selectedCard.name || ""}</h2>
+        <div className="modal__caption">
+          <h2 className="modal__title">{selectedCard.name || ""}</h2>
+        </div>
       </div>
     </div>
   );
