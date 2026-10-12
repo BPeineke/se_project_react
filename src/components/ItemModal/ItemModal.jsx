@@ -3,7 +3,6 @@ import closeIcon from "../../assets/close.png";
 
 function ItemModal({ selectedCard, activeModal, onClose }) {
   if (activeModal !== "preview") return null;
-  console.log(selectedCard);
   return (
     <div className="modal">
       <div className="modal__content modal__content_type_image modal__content_open">
@@ -17,7 +16,12 @@ function ItemModal({ selectedCard, activeModal, onClose }) {
           className="modal__image"
         />
         <div className="modal__caption">
-          <h2 className="modal__title">{selectedCard.name || ""}</h2>
+          <div className="item-modal__header">
+            <h2 className="modal__title">{selectedCard.name || ""}</h2>
+            <span className="item-modal__weather">
+              Weather: {selectedCard.weather || "—"}
+            </span>
+          </div>
         </div>
       </div>
     </div>
