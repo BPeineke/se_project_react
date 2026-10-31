@@ -14,6 +14,7 @@ Pictures, GIFs, or screenshots that detail project features (highly
 recommended)
 
 A demo video of your project (highly recommended)
+https://youtu.be/F0-fpO5UHvE
 
-A link to GitHub Pages:
+A link to GitHub Repository:
 https://github.com/BPeineke/se_project_react.git

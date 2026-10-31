@@ -1,38 +1,7 @@
-.modal__content_type_image {
-  padding: 0;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-
-.modal__image {
-  display: block;
-  width: calc(100% - 80px);
-  max-width: calc(100% - 80px);
-  height: auto;
-  object-fit: contain;
-  box-sizing: border-box;
-  margin: 40px;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-
-.modal__caption {
-  padding: 0 40px 40px;
-}
-
-.modal__caption .modal__title {
-  margin: 0;
-}
-.item-modal__header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-}
-
-.item-modal__weather {
-  font-size: 36px;
-  line-height: 1.2;
-  font-weight: 700;
-  color: #000;
-}
+.modal__content_type_image { padding: 0; border-radius: 8px; overflow: hidden; }
+.modal__image { display: block; width: 100%; max-height: 60vh; object-fit: cover; }
+.modal__caption { padding: 20px 24px 24px; }
+.modal__caption .modal__title { margin: 0; font-size: 20px; }
+.item-modal__header { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.item-modal__weather { font-size: 16px; }
+.item-modal__delete { position: absolute; right: 24px; bottom: 28px; border: 0; background: none; color: #ff4d00; cursor: pointer; font: inherit; }

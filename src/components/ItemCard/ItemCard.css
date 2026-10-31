@@ -1,16 +1,4 @@
-.card {
-  width: 323px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.card__name {
-  position: absolute;
-  top: 15px;
-  margin: 0;
-}
-
-.card__image {
-  width: 100%;
-}
+.card { width: 323px; position: relative; display: flex; justify-content: center; }
+.card__button { position: relative; width: 100%; display: flex; justify-content: center; padding: 0; border: 0; background: transparent; cursor: pointer; font: inherit; }
+.card__name { position: absolute; z-index: 1; top: 15px; margin: 0; padding: 2px 12px; border-radius: 4px; background: #fff; }
+.card__image { display: block; width: 100%; border-radius: 8px; }
