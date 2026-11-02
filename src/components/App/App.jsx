@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { APIkey, coordinates } from "../../utils/constants";
+import { apiKey, coordinates } from "../../utils/constants";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
-import { addItem, deleteItem, filterWeatherdata, getItems, getweather } from "../../utils/api";
+import { addItem, deleteItem, getItems } from "../../utils/api";
+import { filterWeatherData, getWeather } from "../../utils/weatherApi";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
@@ -58,8 +59,8 @@ function App() {
   };
 
   useEffect(() => {
-    getweather(coordinates.latitude, coordinates.longitude, APIkey)
-      .then((data) => setWeatherData(filterWeatherdata(data)))
+    getWeather(coordinates.latitude, coordinates.longitude, apiKey)
+      .then((data) => setWeatherData(filterWeatherData(data)))
       .catch((error) => console.error("Unable to load weather:", error));
     getItems()
       .then(setItems)
