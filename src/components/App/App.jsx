@@ -51,7 +51,9 @@ function App() {
   const handleCardDelete = async (card) => {
     try {
       await deleteItem(card._id);
-      setItems((currentItems) => currentItems.filter((item) => item._id !== card._id));
+      setItems((currentItems) =>
+        currentItems.filter((item) => item._id !== card._id),
+      );
       closeActiveModal();
     } catch (error) {
       console.error("Unable to delete clothing item:", error);
@@ -73,11 +75,20 @@ function App() {
     >
       <div className="page">
         <div className="page__content">
-          <Header weatherData={weatherData} onAddClick={() => setActiveModal("add-item")} />
+          <Header
+            weatherData={weatherData}
+            onAddClick={() => setActiveModal("add-item")}
+          />
           <Routes>
             <Route
               path="/"
-              element={<Main weatherData={weatherData} items={items} handleCardClick={handleCardClick} />}
+              element={
+                <Main
+                  weatherData={weatherData}
+                  items={items}
+                  handleCardClick={handleCardClick}
+                />
+              }
             />
             <Route
               path="/profile"

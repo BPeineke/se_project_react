@@ -1,5 +1,28 @@
-.profile { display: grid; grid-template-columns: 229px 1fr; gap: 32px; }
-.clothes-section__heading { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
-.clothes-section__heading h2 { margin: 0; font-size: 20px; }
-.clothes-section__heading button { border: 0; background: transparent; color: #777; cursor: pointer; font: inherit; }
-@media (max-width: 700px) { .profile { grid-template-columns: 1fr; gap: 24px; } }
+.profile {
+  display: grid;
+  grid-template-columns: 229px 1fr;
+  gap: 32px;
+}
+.clothes-section__heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.clothes-section__heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+.clothes-section__heading button {
+  border: 0;
+  background: transparent;
+  color: #777;
+  cursor: pointer;
+  font: inherit;
+}
+@media (max-width: 700px) {
+  .profile {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

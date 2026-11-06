@@ -6,7 +6,11 @@ function Profile({ items, onCardClick, onAddClick }) {
   return (
     <main className="profile">
       <SideBar />
-      <ClothesSection items={items} onCardClick={onCardClick} onAddClick={onAddClick} />
+      <ClothesSection
+        items={items}
+        onCardClick={onCardClick}
+        onAddClick={onAddClick}
+      />
     </main>
   );
 }

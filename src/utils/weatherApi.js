@@ -7,7 +7,9 @@ const checkResponse = (response) => {
 export const getWeather = (latitude, longitude, apiKey) =>
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`,
-  ).then(checkResponse).then((response) => response.json());
+  )
+    .then(checkResponse)
+    .then((response) => response.json());
 
 export const filterWeatherData = (data) => {
   const fahrenheit = data.main.temp;
@@ -27,9 +29,17 @@ export const filterWeatherData = (data) => {
 export const mapWeatherCondition = (condition) => {
   const normalized = condition.toLowerCase();
   const conditionMap = {
-    clear: "clear", clouds: "cloudy", mist: "fog", haze: "fog", smoke: "fog",
-    dust: "fog", fog: "fog", rain: "rain", drizzle: "rain",
-    thunderstorm: "storm", snow: "snow",
+    clear: "clear",
+    clouds: "cloudy",
+    mist: "fog",
+    haze: "fog",
+    smoke: "fog",
+    dust: "fog",
+    fog: "fog",
+    rain: "rain",
+    drizzle: "rain",
+    thunderstorm: "storm",
+    snow: "snow",
   };
   return conditionMap[normalized] || "clear";
 };

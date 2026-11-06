@@ -1,9 +1,51 @@
-.toggle-switch { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
-.toggle-switch__unit { color: #a0a0a0; font-weight: 700; }
-.toggle-switch__unit_active { color: #000; }
-.toggle-switch__checkbox { position: absolute; width: 1px; height: 1px; opacity: 0; }
-.toggle-switch__track { width: 56px; height: 28px; box-sizing: border-box; border: 2px solid #7e7e7e; border-radius: 20px; background: #fff; position: relative; transition: background-color .15s ease; }
-.toggle-switch__thumb { position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #000; transition: transform .15s ease; }
-.toggle-switch__checkbox:checked + .toggle-switch__track { background: #000; }
-.toggle-switch__checkbox:checked + .toggle-switch__track .toggle-switch__thumb { background: #fff; transform: translateX(28px); }
-.toggle-switch__checkbox:focus-visible + .toggle-switch__track { outline: 2px solid #2f80ed; outline-offset: 2px; }
+.toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.toggle-switch__unit {
+  color: #a0a0a0;
+  font-weight: 700;
+}
+.toggle-switch__unit_active {
+  color: #000;
+}
+.toggle-switch__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.toggle-switch__track {
+  width: 56px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 2px solid #7e7e7e;
+  border-radius: 20px;
+  background: #fff;
+  position: relative;
+  transition: background-color 0.15s ease;
+}
+.toggle-switch__thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #000;
+  transition: transform 0.15s ease;
+}
+.toggle-switch__checkbox:checked + .toggle-switch__track {
+  background: #000;
+}
+.toggle-switch__checkbox:checked + .toggle-switch__track .toggle-switch__thumb {
+  background: #fff;
+  transform: translateX(28px);
+}
+.toggle-switch__checkbox:focus-visible + .toggle-switch__track {
+  outline: 2px solid #2f80ed;
+  outline-offset: 2px;
+}

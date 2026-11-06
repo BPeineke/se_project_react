@@ -4,9 +4,16 @@
   gap: 16px;
   padding: 32px 0 28px;
 }
-.header__logo-link { display: flex; margin-right: 8px; }
-.header__logo { width: 89px; }
-.header__date-and-location { margin: 0; }
+.header__logo-link {
+  display: flex;
+  margin-right: 8px;
+}
+.header__logo {
+  width: 89px;
+}
+.header__date-and-location {
+  margin: 0;
+}
 .header__add-clothes-btn {
   margin-left: auto;
   border: none;
@@ -21,5 +28,12 @@
   color: inherit;
   text-decoration: none;
 }
-.header__username { margin: 0; }
-.header__avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.header__username {
+  margin: 0;
+}
+.header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}

@@ -1,3 +1,15 @@
-.sidebar { display: flex; flex-direction: column; gap: 16px; }
-.sidebar__title { margin: 0; font-size: 20px; }
-.sidebar__avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.sidebar__title {
+  margin: 0;
+  font-size: 20px;
+}
+.sidebar__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
