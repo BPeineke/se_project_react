@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: 16px;
 }
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 .sidebar__title {
   margin: 0;
   font-size: 20px;
@@ -12,4 +17,18 @@
   height: 56px;
   border-radius: 50%;
   object-fit: cover;
+}
+.sidebar__avatar-placeholder {
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+}
+.sidebar__action {
+  align-self: flex-start;
+  border: 0;
+  background: transparent;
+  color: #777;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
 }

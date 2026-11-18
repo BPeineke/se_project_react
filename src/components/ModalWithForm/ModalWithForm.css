@@ -140,6 +140,28 @@
   opacity: 0.9;
 }
 
+.modal__error {
+  margin: -8px 0 0;
+  color: #c62828;
+  font-size: 14px;
+}
+
+.modal__switch {
+  margin: -4px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.modal__switch button {
+  border: 0;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0;
+}
+
 .modal__submit:focus-visible,
 .modal__close:focus-visible {
   outline: 2px solid #2f80ed;

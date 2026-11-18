@@ -18,3 +18,8 @@ https://youtu.be/F0-fpO5UHvE
 
 A link to GitHub Repository:
 https://github.com/BPeineke/se_project_react.git
+
+## Backend Repository
+
+The WTWR backend API repository is available at:
+https://github.com/BPeineke/se_project_express

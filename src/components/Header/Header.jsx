@@ -1,10 +1,18 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
-import avatar from "../../assets/avatar.png";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 import ToggleSwitch from "../Main/Toggleswitch/ToggleSwitch.js/ToggleSwitch.jsx";
 
-function Header({ onAddClick, weatherData }) {
+function Header({
+  onAddClick,
+  onLoginClick,
+  onRegisterClick,
+  isLoggedIn,
+  weatherData,
+}) {
+  const currentUser = useContext(CurrentUserContext);
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
@@ -18,17 +26,40 @@ function Header({ onAddClick, weatherData }) {
         {currentDate}, {weatherData.city}
       </p>
       <ToggleSwitch />
-      <button
-        className="header__add-clothes-btn"
-        onClick={onAddClick}
-        type="button"
-      >
-        + Add clothes
-      </button>
-      <Link to="/profile" className="header__user-container">
-        <span className="header__username">Terrence Tegegne</span>
-        <img src={avatar} alt="User avatar" className="header__avatar" />
-      </Link>
+      {isLoggedIn ? (
+        <>
+          <button
+            className="header__add-clothes-btn"
+            onClick={onAddClick}
+            type="button"
+          >
+            + Add clothes
+          </button>
+          <Link to="/profile" className="header__user-container">
+            <span className="header__username">{currentUser?.name}</span>
+            {currentUser?.avatar ? (
+              <img
+                src={currentUser.avatar}
+                alt={`${currentUser.name || "User"} avatar`}
+                className="header__avatar"
+              />
+            ) : (
+              <span className="header__avatar-placeholder" aria-hidden="true">
+                {currentUser?.name?.charAt(0).toUpperCase() || "?"}
+              </span>
+            )}
+          </Link>
+        </>
+      ) : (
+        <div className="header__auth-actions">
+          <button type="button" onClick={onLoginClick}>
+            Log in
+          </button>
+          <button type="button" onClick={onRegisterClick}>
+            Sign up
+          </button>
+        </div>
+      )}
     </header>
   );
 }

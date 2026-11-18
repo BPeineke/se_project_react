@@ -1,27 +1,44 @@
 const baseUrl = "http://localhost:3001";
 
-const checkResponse = (response) => {
+const checkResponse = async (response) => {
+  const responseData = await response.json().catch(() => ({}));
   if (!response.ok) {
-    return Promise.reject(new Error(`Request failed: ${response.status}`));
+    throw new Error(
+      responseData.message || `Request failed: ${response.status}`,
+    );
   }
-  return response;
+  return responseData;
 };
 
 export const getItems = () =>
   fetch(`${baseUrl}/items`)
-    .then(checkResponse)
-    .then((response) => response.json());
+    .then(checkResponse);
 
-export const addItem = (item) =>
+export const addItem = (item, token) =>
   fetch(`${baseUrl}/items`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${token}`,
+    },
     body: JSON.stringify(item),
   })
-    .then(checkResponse)
-    .then((response) => response.json());
+    .then(checkResponse);
 
-export const deleteItem = (id) =>
+export const deleteItem = (id, token) =>
   fetch(`${baseUrl}/items/${encodeURIComponent(id)}`, {
     method: "DELETE",
+    headers: { authorization: `Bearer ${token}` },
+  }).then(checkResponse);
+
+export const addCardLike = (id, token) =>
+  fetch(`${baseUrl}/items/${encodeURIComponent(id)}/likes`, {
+    method: "PUT",
+    headers: { authorization: `Bearer ${token}` },
+  }).then(checkResponse);
+
+export const removeCardLike = (id, token) =>
+  fetch(`${baseUrl}/items/${encodeURIComponent(id)}/likes`, {
+    method: "DELETE",
+    headers: { authorization: `Bearer ${token}` },
   }).then(checkResponse);
