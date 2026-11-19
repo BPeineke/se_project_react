@@ -1,14 +1,6 @@
-const baseUrl = "http://localhost:3001";
+import { checkResponse } from "./api";
 
-const checkResponse = async (response) => {
-  const responseData = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    throw new Error(
-      responseData.message || `Request failed: ${response.status}`
-    );
-  }
-  return responseData;
-};
+const baseUrl = "http://localhost:3001";
 
 export const register = (userData) =>
   fetch(`${baseUrl}/signup`, {
@@ -41,3 +33,4 @@ export const updateUser = (userData, token) =>
     },
     body: JSON.stringify(userData),
   }).then(checkResponse);
+

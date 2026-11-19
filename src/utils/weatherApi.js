@@ -1,15 +1,9 @@
-const checkResponse = (response) => {
-  if (!response.ok) {
-    return Promise.reject(new Error(`Request failed: ${response.status}`));
-  }
-  return response;
-};
+import { checkResponse } from "./api";
+
 export const getWeather = (latitude, longitude, apiKey) =>
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`
-  )
-    .then(checkResponse)
-    .then((response) => response.json());
+  ).then(checkResponse);
 
 export const filterWeatherData = (data) => {
   const fahrenheit = data.main.temp;
@@ -55,3 +49,4 @@ export const getWeatherType = (fahrenheit) => {
   if (fahrenheit >= 66) return "warm";
   return "cold";
 };
+
