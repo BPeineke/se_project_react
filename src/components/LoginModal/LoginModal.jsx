@@ -76,7 +76,11 @@ function LoginModal({ isOpen, onLogin, onClose, onSwitchToRegister }) {
       )}
       <p className="modal__switch">
         No account yet?{" "}
-        <button type="button" onClick={handleSwitchToRegister}>
+        <button
+          className="modal__switch-button"
+          type="button"
+          onClick={handleSwitchToRegister}
+        >
           Sign up
         </button>
       </p>

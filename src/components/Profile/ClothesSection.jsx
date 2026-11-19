@@ -12,8 +12,12 @@ function ClothesSection({ items, onCardClick, onCardLike, onAddClick }) {
   return (
     <section className="clothes-section">
       <div className="clothes-section__heading">
-        <h2>Your items</h2>
-        <button type="button" onClick={onAddClick}>
+        <h2 className="clothes-section__title">Your items</h2>
+        <button
+          className="clothes-section__add-button"
+          type="button"
+          onClick={onAddClick}
+        >
           + Add new
         </button>
       </div>

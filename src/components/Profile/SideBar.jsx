@@ -15,7 +15,10 @@ function SideBar({ onEditProfileClick, onSignOut }) {
             alt={`${currentUser.name || "User"} avatar`}
           />
         ) : (
-          <span className="sidebar__avatar-placeholder" aria-hidden="true">
+          <span
+            className="user-avatar-placeholder user-avatar-placeholder_size_sidebar"
+            aria-hidden="true"
+          >
             {currentUser?.name?.charAt(0).toUpperCase() || "?"}
           </span>
         )}
@@ -28,11 +31,7 @@ function SideBar({ onEditProfileClick, onSignOut }) {
       >
         Edit profile
       </button>
-      <button
-        className="sidebar__action"
-        type="button"
-        onClick={onSignOut}
-      >
+      <button className="sidebar__action" type="button" onClick={onSignOut}>
         Sign out
       </button>
     </aside>

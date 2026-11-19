@@ -38,23 +38,6 @@
   object-fit: cover;
 }
 
-.header__avatar-placeholder,
-.sidebar__avatar-placeholder {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  background-color: #d9d9d9;
-  color: #000;
-  font-weight: 700;
-}
-
-.header__avatar-placeholder {
-  width: 40px;
-  height: 40px;
-}
-
 .header__auth-actions {
   display: flex;
   align-items: center;
@@ -62,14 +45,46 @@
   margin-left: auto;
 }
 
-.header__auth-actions button {
+.header__auth-button {
   border: 0;
   background: transparent;
   color: inherit;
   cursor: pointer;
   font: inherit;
+  transition: opacity 0.2s ease;
 }
 
-.header__auth-actions button:last-child {
+.header__auth-button_prominent {
   font-weight: 700;
+}
+
+.header__logo-link:hover,
+.header__user-container:hover,
+.header__add-clothes-btn:hover,
+.header__auth-button:hover {
+  opacity: 0.7;
+}
+
+.header__logo-link:focus-visible,
+.header__user-container:focus-visible,
+.header__add-clothes-btn:focus-visible,
+.header__auth-button:focus-visible {
+  outline: 2px solid #2f80ed;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 0;
+  }
+
+  .header__date-and-location {
+    flex: 1 1 140px;
+  }
+
+  .header__auth-actions {
+    gap: 12px;
+  }
 }

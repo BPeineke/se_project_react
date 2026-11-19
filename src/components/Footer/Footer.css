@@ -16,3 +16,10 @@
 .footer__year {
   text-align: right;
 }
+
+@media (max-width: 480px) {
+  .footer {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

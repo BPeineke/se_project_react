@@ -13,7 +13,7 @@ A description of the technologies and techniques used:
 Pictures, GIFs, or screenshots that detail project features (highly
 recommended)
 
-A demo video of your project (highly recommended)
+A demo video of the front end of the project
 https://youtu.be/F0-fpO5UHvE
 
 A link to GitHub Repository:

@@ -28,6 +28,10 @@
   position: relative;
   transition: background-color 0.15s ease;
 }
+
+.toggle-switch:hover .toggle-switch__track {
+  border-color: #000;
+}
 .toggle-switch__thumb {
   position: absolute;
   top: 3px;

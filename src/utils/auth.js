@@ -3,7 +3,9 @@ const baseUrl = "http://localhost:3001";
 const checkResponse = async (response) => {
   const responseData = await response.json().catch(() => ({}));
   if (!response.ok) {
-    throw new Error(responseData.message || `Request failed: ${response.status}`);
+    throw new Error(
+      responseData.message || `Request failed: ${response.status}`
+    );
   }
   return responseData;
 };

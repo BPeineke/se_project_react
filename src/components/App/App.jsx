@@ -129,7 +129,7 @@ function App() {
     try {
       await deleteItem(card._id, token);
       setItems((currentItems) =>
-        currentItems.filter((item) => item._id !== card._id),
+        currentItems.filter((item) => item._id !== card._id)
       );
       closeActiveModal();
     } catch (error) {
@@ -146,7 +146,7 @@ function App() {
         ? await removeCardLike(id, token)
         : await addCardLike(id, token);
       setItems((currentItems) =>
-        currentItems.map((item) => (item._id === id ? updatedCard : item)),
+        currentItems.map((item) => (item._id === id ? updatedCard : item))
       );
     } catch (error) {
       console.error("Unable to update clothing item like:", error);

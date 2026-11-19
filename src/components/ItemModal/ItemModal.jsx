@@ -27,7 +27,7 @@ function ItemModal({ selectedCard, activeModal, onClose, onDelete }) {
           className="modal__close"
           aria-label="Close modal"
         >
-          <img src={closeIcon} alt="" />
+          <img className="modal__close-icon" src={closeIcon} alt="" />
         </button>
         <img
           alt={selectedCard.name || "Clothing item"}
@@ -36,7 +36,9 @@ function ItemModal({ selectedCard, activeModal, onClose, onDelete }) {
         />
         <div className="modal__caption">
           <div className="item-modal__header">
-            <h2 className="modal__title">{selectedCard.name || ""}</h2>
+            <h2 className="modal__title modal__title_type_caption">
+              {selectedCard.name || ""}
+            </h2>
             <span className="item-modal__weather">
               Weather: {selectedCard.weather || "—"}
             </span>

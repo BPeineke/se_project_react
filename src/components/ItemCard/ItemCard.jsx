@@ -9,7 +9,7 @@ function ItemCard({ item, handleCardClick, onCardLike }) {
       item.likes?.some((like) => {
         const likeId = like?._id || like;
         return String(likeId) === String(currentUser._id);
-      }),
+      })
   );
   const likeButtonClassName = `card__like-button ${
     isLiked ? "card__like-button_active" : ""

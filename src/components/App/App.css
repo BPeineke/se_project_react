@@ -5,7 +5,30 @@
 }
 
 .page__content {
+  width: 100%;
   max-width: 1360px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.user-avatar-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  color: #000;
+  font-weight: 700;
+}
+
+.user-avatar-placeholder_size_header {
+  width: 40px;
+  height: 40px;
+}
+
+.user-avatar-placeholder_size_sidebar {
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
 }

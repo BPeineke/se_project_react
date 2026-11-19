@@ -44,7 +44,10 @@ function Header({
                 className="header__avatar"
               />
             ) : (
-              <span className="header__avatar-placeholder" aria-hidden="true">
+              <span
+                className="user-avatar-placeholder user-avatar-placeholder_size_header"
+                aria-hidden="true"
+              >
                 {currentUser?.name?.charAt(0).toUpperCase() || "?"}
               </span>
             )}
@@ -52,10 +55,18 @@ function Header({
         </>
       ) : (
         <div className="header__auth-actions">
-          <button type="button" onClick={onLoginClick}>
+          <button
+            className="header__auth-button"
+            type="button"
+            onClick={onLoginClick}
+          >
             Log in
           </button>
-          <button type="button" onClick={onRegisterClick}>
+          <button
+            className="header__auth-button header__auth-button_prominent"
+            type="button"
+            onClick={onRegisterClick}
+          >
             Sign up
           </button>
         </div>

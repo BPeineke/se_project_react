@@ -22,7 +22,7 @@ function ModalWithForm({
           className="modal__close"
           aria-label="Close modal"
         >
-          <img src={closeIcon} alt="Close" />
+          <img className="modal__close-icon" src={closeIcon} alt="Close" />
         </button>
         <form className="modal__form" name={formName} onSubmit={onSubmit}>
           {children}

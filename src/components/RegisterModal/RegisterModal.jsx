@@ -2,12 +2,7 @@ import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function RegisterModal({
-  isOpen,
-  onRegister,
-  onClose,
-  onSwitchToLogin,
-}) {
+function RegisterModal({ isOpen, onRegister, onClose, onSwitchToLogin }) {
   const { values, handleChange, resetForm } = useForm({
     name: "",
     avatar: "",
@@ -111,7 +106,11 @@ function RegisterModal({
       )}
       <p className="modal__switch">
         Already have an account?{" "}
-        <button type="button" onClick={handleSwitchToLogin}>
+        <button
+          className="modal__switch-button"
+          type="button"
+          onClick={handleSwitchToLogin}
+        >
           Log in
         </button>
       </p>

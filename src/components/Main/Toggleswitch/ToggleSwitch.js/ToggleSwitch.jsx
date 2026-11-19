@@ -4,7 +4,7 @@ import CurrentTemperatureUnitContext from "../../../../contexts/CurrentTemperatu
 
 function ToggleSwitch() {
   const { currentTemperatureUnit, handleToggleSwitchChange } = useContext(
-    CurrentTemperatureUnitContext,
+    CurrentTemperatureUnitContext
   );
   return (
     <label className="toggle-switch" aria-label="Temperature unit">

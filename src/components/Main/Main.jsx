@@ -8,6 +8,7 @@ function Main({ weatherData, items, handleCardClick, onCardLike }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
   return (
     <main>
+      <h1 className="visually-hidden">What to wear today</h1>
       <WeatherCard weatherData={weatherData} />
       <section className="cards">
         <p className="cards__text">

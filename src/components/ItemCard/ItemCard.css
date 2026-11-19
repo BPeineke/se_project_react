@@ -1,5 +1,7 @@
 .card {
-  width: 323px;
+  flex: 1 1 280px;
+  width: min(100%, 323px);
+  max-width: 323px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -22,6 +24,10 @@
 .card__like-button_active {
   color: #ff4d00;
 }
+
+.card__like-button:hover {
+  opacity: 0.75;
+}
 .card__like-button:focus-visible {
   outline: 2px solid #2f80ed;
   outline-offset: 2px;
@@ -36,6 +42,11 @@
   background: transparent;
   cursor: pointer;
   font: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.card__button:hover {
+  opacity: 0.85;
 }
 .card__name {
   position: absolute;
