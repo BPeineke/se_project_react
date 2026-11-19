@@ -42,6 +42,18 @@ function LoginModal({ isOpen, onLogin, onClose, onSwitchToRegister }) {
       onSubmit={handleSubmit}
       isOpen={isOpen}
       onClose={handleClose}
+      secondaryAction={
+        <p className="modal__switch">
+          No account yet?{" "}
+          <button
+            className="modal__switch-button"
+            type="button"
+            onClick={handleSwitchToRegister}
+          >
+            Sign up
+          </button>
+        </p>
+      }
     >
       <label htmlFor="login-email" className="modal__label">
         Email
@@ -74,18 +86,9 @@ function LoginModal({ isOpen, onLogin, onClose, onSwitchToRegister }) {
           {errorMessage}
         </p>
       )}
-      <p className="modal__switch">
-        No account yet?{" "}
-        <button
-          className="modal__switch-button"
-          type="button"
-          onClick={handleSwitchToRegister}
-        >
-          Sign up
-        </button>
-      </p>
     </ModalWithForm>
   );
 }
 
 export default LoginModal;
+

@@ -9,6 +9,7 @@ function ModalWithForm({
   isOpen,
   onClose,
   children,
+  secondaryAction,
 }) {
   if (!isOpen) return null;
 
@@ -26,9 +27,12 @@ function ModalWithForm({
         </button>
         <form className="modal__form" name={formName} onSubmit={onSubmit}>
           {children}
-          <button type="submit" className="modal__submit">
-            {buttonText}
-          </button>
+          <div className="modal__actions">
+            <button type="submit" className="modal__submit">
+              {buttonText}
+            </button>
+            {secondaryAction}
+          </div>
         </form>
       </div>
     </div>
@@ -36,3 +40,4 @@ function ModalWithForm({
 }
 
 export default ModalWithForm;
+

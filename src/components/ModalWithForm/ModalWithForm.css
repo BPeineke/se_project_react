@@ -142,6 +142,13 @@
   transition: opacity 0.2s ease;
 }
 
+.modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .modal__submit:hover {
   opacity: 0.9;
 }
@@ -187,4 +194,9 @@
   .modal__title {
     font-size: clamp(24px, 7vw, 36px);
   }
+
+  .modal__actions {
+    gap: 12px;
+  }
 }
+

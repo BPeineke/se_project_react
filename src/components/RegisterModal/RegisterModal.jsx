@@ -44,6 +44,18 @@ function RegisterModal({ isOpen, onRegister, onClose, onSwitchToLogin }) {
       onSubmit={handleSubmit}
       isOpen={isOpen}
       onClose={handleClose}
+      secondaryAction={
+        <p className="modal__switch">
+          Already have an account?{" "}
+          <button
+            className="modal__switch-button"
+            type="button"
+            onClick={handleSwitchToLogin}
+          >
+            Log in
+          </button>
+        </p>
+      }
     >
       <label htmlFor="register-name" className="modal__label">
         Name
@@ -104,18 +116,9 @@ function RegisterModal({ isOpen, onRegister, onClose, onSwitchToLogin }) {
           {errorMessage}
         </p>
       )}
-      <p className="modal__switch">
-        Already have an account?{" "}
-        <button
-          className="modal__switch-button"
-          type="button"
-          onClick={handleSwitchToLogin}
-        >
-          Log in
-        </button>
-      </p>
     </ModalWithForm>
   );
 }
 
 export default RegisterModal;
+
