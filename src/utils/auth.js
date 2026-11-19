@@ -33,4 +33,3 @@ export const updateUser = (userData, token) =>
     },
     body: JSON.stringify(userData),
   }).then(checkResponse);
-
