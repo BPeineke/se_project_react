@@ -77,4 +77,3 @@ function EditProfileModal({ isOpen, onUpdateProfile, onClose }) {
 }
 
 export default EditProfileModal;
-
